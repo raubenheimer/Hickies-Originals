@@ -1,0 +1,267 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.container-fluid {
+    height: 100%;
+    width: 100%;
+}
+.row{
+    margin-top: 1em;
+    margin-bottom: 0em;
+}
+
+div.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ffffff;
+    padding-left: 0.9em;
+    height: 100%;
+    margin: auto;
+}
+
+div.details {
+    background-color: #000000;
+    height: 100%;
+    color: #ffffff;
+}
+
+/* "HICKIES Originals" */
+
+h1 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 0.5em;
+}
+
+/* Website banner styling */
+#banner {
+    background-color: #808080;
+    border: 2px solid black;
+    margin-top: 0em;
+}
+
+/* Product Card */
+.card {
+    margin-top: 1em;
+    width: 18rem;
+    height: 27rem;
+    background-color: #c0c0c0;
+}
+
+#subContent{
+    padding-left: 2em;
+    padding-bottom: 2em;
+}
+
+/* Shirt picture resizing */
+#shirtPic {
+    transform: scale(0.97);
+}
+
+/* Review */
+.starred {
+    color: orange;
+}
+#reviewNum {
+    margin-left: 1em;
+    margin-right: 0.3em;
+}
+.fa {
+    transform: scale(1.5);
+    margin-left: 0.5em;
+}
+
+/* Styling for pricing information */
+/* "$14.99" */
+#discountPrice {
+    color: #FF5951;
+    font-weight: bold;
+    margin-left: 0em;
+    margin-top: 0.6em;
+}
+.grayTxt{
+    color: gray;
+    margin-right: 1em;
+}
+.cross {
+    text-decoration: line-through;
+}
+
+/* "Color Selection" */
+.bold {
+    font-weight: bold;
+    margin-right: 0.7em;
+}
+
+/* Unorder list elements used for color selection indicator */
+
+ul {
+    list-style: none;
+    margin-left: 0em;
+    width: 20em;
+}
+
+/* li elements used for color selection indicator */
+
+li {
+    float: left;
+    border: 2px solid white;
+    border-radius: 100%;
+    height: 2.5em;
+    width: 2.5em;
+    margin-right: 0em;
+    margin-left: 0;
+}
+
+/* div elements that contain the color */
+
+.colorSelect {
+    margin: .1em auto;
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
+}
+
+/* Color button hex codes */
+
+#purple {
+    background-color: #a428ff;
+}
+
+#royalBlue {
+    background-color: #2a5fff;
+}
+
+#electricRed {
+    background-color: #ff2d2d;
+}
+
+#limeGreen {
+    background-color: #2aff2a;
+}
+
+#yellow {
+    background-color: #ffcf2e;
+}
+
+#dodgerBlue {
+    background-color: #34c7ff;
+}
+
+/* radio buttons for color selection */
+input.colorRadio {
+    position: relative;
+    margin-left: 0.4em;
+    margin-top: 0.6em;
+    margin-bottom: 0em;
+    margin-right: 0em;
+    cursor: pointer;
+    transform: scale(2.3);
+    opacity: 0;
+    display: inline-block;
+}
+
+/* "Size Selection" */
+#sizeLable {
+    font-weight: bold;
+}
+
+/* Size Selection buttons */
+input.sizeSelect {
+    visibility: hidden;
+    position: fixed;
+    opacity: 0
+}
+
+
+/* Add to Cart button number display */
+#display {
+    font-weight: bold;
+    border-radius: 25px;
+    border: 0.09em solid #000000;
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+    margin-right: 1em;
+    height: 2em;
+}
+
+/* Add to Cart button */
+
+#elong {
+    color: white;
+    background-color: #000000;
+    border-radius: 8px;
+    padding: 0.5em 8em;
+}
+
+.details {
+    margin-top: 0;
+    padding: 0em;
+}
+
+.white {
+    color: #ffffff;
+}
+
+h5 {
+    margin-top: 1.3em;
+    margin-left: 0.5em;
+}
+
+/* Horizontal lines */
+
+hr {
+    border-top: solid 2px white;
+    background-color: #000000;
+    display: block;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styling for all text buttons */
+.txt_btn {
+    border: none;
+    background-color: inherit;
+}
+.txt_btn:hover {
+    text-decoration: underline;
+}
+
+/* Table stylings for size guide modal */
+.size {
+    font-weight: bold;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+.quant {
+    font-size: 1.5em;
+    padding: 0.5em 0.5em;
+    text-align: center;
+}
+
+#FAQ {
+    font-weight: bold;
+}
+
+#FAQ:hover {
+    text-decoration: underline;
+}
+
+#contact {
+    font-weight: bold;
+}
+
+#gitLink {
+    margin-left: 1em;
+}
+
+#theDots {
+    margin-left: 3em;
+}
