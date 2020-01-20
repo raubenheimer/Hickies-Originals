@@ -307,6 +307,31 @@
     </div>
   </div>
 
+    <!--Bootstrap Modal for Check Out-->
+    <div id="checkOutModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+  
+        <!--Check Out Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Check Out Now</h4>
+          </div>
+          <div class="modal-body">
+            <p>Product summary:</p>
+            <p>Product: Hickies Original Crew Neck</p>
+            <p>Color: <span id="checkOutColor">color</span></p>
+            <p>Size: <span id="checkOutSize">size</span></p>
+            <p>Quantity: <span id="checkOutQuantity">size</span></p>
+            <p>Total Cost: <span id="checkOutCost">size</span></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="refresh()">Confirm</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   <!--Link jquery-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

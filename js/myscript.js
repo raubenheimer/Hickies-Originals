@@ -39,9 +39,17 @@ function updateDisplay() {
   $("#display").text($("#counter").text());
   $("#elong").text("Check Out Now");
   $("#elong").css("background-color", "green");
-  $("#elong").removeAttr("data-target")
-  $("#elong").removeAttr("data-toggle")
+  $("#elong").attr("data-target","#checkOutModal")
+  $("#elong").attr("onclick","generateCheckOut()")
   details()
+}
+
+//Generates checkout model info
+function generateCheckOut() {
+  $("#checkOutColor").text($("input[name=colors]:checked").val());
+  $("#checkOutSize").text($("input[name=sizes]:checked").parent().text())
+  $("#checkOutQuantity").text($("#display").text())
+  $("#checkOutCost").text()
 }
 
 //Updates model color and size selection output 
@@ -71,5 +79,9 @@ function rating(stars) {
   if ($("#reviewNum").text() == "1293") {
     $("#reviewNum").text("1294")
   }
+}
+
+function refresh() {
+  location.reload();
 }
 
