@@ -1,8 +1,11 @@
+var discountHtml =  $("#discountPrice").parent().html()
+
 //jquery code that enables popovers
 $(document).ready(function () {
   $('[data-toggle="popover"]').popover();
 });
 
+//Selects Electric Red
 $("#color2").prop("checked", true)
 colorSelector()
 
@@ -46,10 +49,12 @@ function updateDisplay() {
 
 //Generates checkout model info
 function generateCheckOut() {
+  var cost = Number($("#discountPrice").text().replace(/\$/g, '')) * Number($("#display").text())
+  console.log(cost);
   $("#checkOutColor").text($("input[name=colors]:checked").val());
   $("#checkOutSize").text($("input[name=sizes]:checked").parent().text())
   $("#checkOutQuantity").text($("#display").text())
-  $("#checkOutCost").text()
+  $("#checkOutCost").text('$' + cost)
 }
 
 //Updates model color and size selection output 
@@ -65,6 +70,12 @@ function colorSelector() {
   $("input[name=colors]").parent().parent().css("border", "2px solid white");
   $("input[name=colors]:checked").parent().parent().css("border", "2px solid black");
   $("#shirtPic").attr('src', 'img/' + color + '.png');
+  if (color != 'Electric Red') {
+    $("#discountPrice").parent().html('<h4 id="discountPrice">$17.99</h4>');
+  }
+  else{
+    $("#discountPrice").parent().html(discountHtml);
+  }
 }
 
 //Five star rating system
@@ -81,6 +92,7 @@ function rating(stars) {
   }
 }
 
+//Check Out Confirm Button Refresh
 function refresh() {
   location.reload();
 }
