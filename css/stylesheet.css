@@ -29,7 +29,6 @@ div.details {
 }
 
 /* "HICKIES Originals" */
-
 h1 {
     color: #ffffff;
     font-weight: bold;
@@ -189,7 +188,6 @@ input.sizeSelect {
 }
 
 /* Add to Cart button */
-
 #elong {
     color: white;
     background-color: #000000;
@@ -212,7 +210,6 @@ h5 {
 }
 
 /* Horizontal lines */
-
 hr {
     border-top: solid 2px white;
     background-color: #000000;
@@ -246,22 +243,15 @@ td, th {
     text-align: center;
 }
 
-#FAQ {
-    font-weight: bold;
-}
-
 #FAQ:hover {
     text-decoration: underline;
-}
-
-#contact {
-    font-weight: bold;
 }
 
 #gitLink {
     margin-left: 1em;
 }
 
+/* Container for detail dots */
 #theDots {
     margin-left: 3em;
 }

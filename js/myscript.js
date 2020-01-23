@@ -1,4 +1,4 @@
-var discountHtml =  $("#discountPrice").parent().html()
+var discountHtml = $("#discountPrice").parent().html()
 
 //jquery code that enables popovers
 $(document).ready(function () {
@@ -25,11 +25,11 @@ function decrementCounter() {
   }
 }
 
-//Creates dots
+//Creates dots under details
 function details() {
   var numProducts = Number($("#counter").text())
   var dotColor = $("input[name=colors]:checked").parent().attr('id')
-  var htmlDot = "<label class=\"colorSelect\" id=\"" + dotColor+ "\"></label>"
+  var htmlDot = "<label class=\"colorSelect\" id=\"" + dotColor + "\"></label>"
   for (i = numProducts; i > 0; i--) {
     var htmlNow = $("#theDots").html()
     $("#theDots").html(htmlNow + htmlDot)
@@ -42,22 +42,21 @@ function updateDisplay() {
   $("#display").text($("#counter").text());
   $("#elong").text("Check Out Now");
   $("#elong").css("background-color", "green");
-  $("#elong").attr("data-target","#checkOutModal")
-  $("#elong").attr("onclick","generateCheckOut()")
+  $("#elong").attr("data-target", "#checkOutModal")
+  $("#elong").attr("onclick", "generateCheckOut()")
   details()
 }
 
-//Generates checkout model info
+//Generates check out modal info
 function generateCheckOut() {
   var cost = Number($("#discountPrice").text().replace(/\$/g, '')) * Number($("#display").text())
-  console.log(cost);
   $("#checkOutColor").text($("input[name=colors]:checked").val());
   $("#checkOutSize").text($("input[name=sizes]:checked").parent().text())
   $("#checkOutQuantity").text($("#display").text())
   $("#checkOutCost").text('$' + cost)
 }
 
-//Updates model color and size selection output 
+//Updates add to cart modal color and size selection output 
 function updateModalColorAndSize() {
   $("#Color_Input").text($("#Color_Output").text())
   $("#sizeInput").text($("input[name=sizes]:checked").parent().text())
@@ -70,10 +69,12 @@ function colorSelector() {
   $("input[name=colors]").parent().parent().css("border", "2px solid white");
   $("input[name=colors]:checked").parent().parent().css("border", "2px solid black");
   $("#shirtPic").attr('src', 'img/' + color + '.png');
+
+  //If statment that enables the discount on electric red
   if (color != 'Electric Red') {
     $("#discountPrice").parent().html('<h4 id="discountPrice">$17.99</h4>');
   }
-  else{
+  else {
     $("#discountPrice").parent().html(discountHtml);
   }
 }
@@ -92,7 +93,7 @@ function rating(stars) {
   }
 }
 
-//Check Out Confirm Button Refresh
+//Check out modal refreshes page
 function refresh() {
   location.reload();
 }
